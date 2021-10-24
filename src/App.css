@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: #000;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Montserrat';
+}
+
+button {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 5px 2px #61bea2;
 }
 
-.App-link {
-  color: #61dafb;
+button img {
+  height: 36px;
+  opacity: 0.8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #777;
+  letter-spacing: 0.5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+button.animate {
+  animation: scale-down 3.5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scale-down {
+  100% {
+    transform: scale(0.225);
+    background-color: #ebfefe;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+button.animate img {
+  animation: fade-out 1s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  100% {
+    opacity: 0;
   }
 }

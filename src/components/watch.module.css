@@ -1,0 +1,136 @@
+.watchface {
+  --timer: 5s;
+  --timer-2: 35s;
+  --delay: 0s;
+  --w: 125px;
+
+  height: var(--w);
+  width: var(--w);
+}
+
+.watchface_on,
+.watchface_off {
+  composes: watchface;
+}
+
+.watchface_off {
+  animation: none;
+  --w: 20px;
+}
+
+.watchface_off > div {
+  animation: none;
+}
+
+.watchface_on {
+  animation: pulse var(--timer) cubic-bezier(0.5, 0, 0.5, 1) alternate infinite;
+}
+
+.watchface > div {
+  height: var(--w);
+  width: var(--w);
+  border-radius: 50%;
+  position: absolute;
+  mix-blend-mode: screen;
+  transform: translate(0, 0);
+  animation: center var(--timer) infinite;
+}
+
+.watchface > div:nth-child(odd) {
+  background: #61bea2;
+}
+
+.watchface > div:nth-child(even) {
+  background: #529ca0;
+}
+
+.watchface_on > div:nth-child(1) {
+  animation: circle-1 var(--timer) ease alternate infinite;
+}
+
+.watchface_on > div:nth-child(2) {
+  animation: circle-2 var(--timer) ease alternate infinite;
+}
+
+.watchface_on > div:nth-child(3) {
+  animation: circle-3 var(--timer) ease alternate infinite;
+}
+
+.watchface_on > div:nth-child(4) {
+  animation: circle-4 var(--timer) ease alternate infinite;
+}
+
+.watchface_on > div:nth-child(5) {
+  animation: circle-5 var(--timer) ease alternate infinite;
+}
+
+.watchface_on > div:nth-child(6) {
+  animation: circle-6 var(--timer) ease alternate infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.15) rotate(180deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circle-1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-35px, -50px);
+  }
+}
+
+@keyframes circle-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(35px, 50px);
+  }
+}
+
+@keyframes circle-3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-60px, 0);
+  }
+}
+
+@keyframes circle-4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(60px, 0);
+  }
+}
+
+@keyframes circle-5 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-35px, 50px);
+  }
+}
+
+@keyframes circle-6 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(35px, -50px);
+  }
+}
+
+.texts span {
+  position: absolute;
+}
