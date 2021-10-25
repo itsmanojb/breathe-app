@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 body {
   background: #000;
@@ -9,7 +9,9 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: 'Montserrat';
+  font-family: 'Roboto';
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 button {
@@ -40,8 +42,7 @@ button img {
   align-items: center;
   justify-content: center;
   padding: 20px 0;
-  font-size: 15px;
-  letter-spacing: 1px;
+  font-size: 16px;
 }
 
 button.animate {

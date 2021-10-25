@@ -38,7 +38,9 @@ function App() {
           <img src={reset ? RestartIcon : PlayIcon} alt="" />
         </button>
       )}
-      <div className="text">{init && <BreathingText {...{ timer }} />}</div>
+      <div className="text">
+        {init ? <BreathingText {...{ timer }} /> : '1-min breathing exercise'}
+      </div>
     </div>
   );
 }
